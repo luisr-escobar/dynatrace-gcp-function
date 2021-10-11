@@ -20,42 +20,6 @@ gcp:
   - value: resource.labels.zone
     id: zone
   metrics:
-  - value: compute.googleapis.com/firewall/dropped_bytes_count
-    id: cloud.gcp.compute_googleapis_com.firewall.dropped_bytes_count
-    type: count,delta
-    name: Dropped bytes
-    unit: By
-    gcpOptions:
-      ingestDelay: 240s
-      samplePeriod: 60s
-      valueType: INT64
-      metricKind: DELTA
-    dimensions:
-    - value: metric.labels.instance_name
-  - value: compute.googleapis.com/firewall/dropped_packets_count
-    id: cloud.gcp.compute_googleapis_com.firewall.dropped_packets_count
-    type: count,delta
-    name: Dropped packets
-    unit: '1'
-    gcpOptions:
-      ingestDelay: 240s
-      samplePeriod: 60s
-      valueType: INT64
-      metricKind: DELTA
-    dimensions:
-    - value: metric.labels.instance_name
-  - value: compute.googleapis.com/guest/cpu/runnable_task_count
-    id: cloud.gcp.compute_googleapis_com.guest.cpu.runnable_task_count
-    type: gauge
-    name: Runnable task count.
-    unit: '1'
-    gcpOptions:
-      ingestDelay: 180s
-      samplePeriod: 60s
-      valueType: DOUBLE
-      metricKind: GAUGE
-    dimensions:
-    - value: metric.labels.instance_name
   - value: compute.googleapis.com/guest/cpu/usage_time
     id: cloud.gcp.compute_googleapis_com.guest.cpu.usage_time
     type: count,delta
